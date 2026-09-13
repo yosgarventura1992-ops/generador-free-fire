@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Generador Free Fire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>🎮 GENERADOR FREE FIRE 🎮</h1>
+                <p class="subtitle">Genera nombres épicos, builds, estrategias y más</p>
+            </div>
+        </header>
+
+        <nav class="menu-principal">
+            <button class="btn-menu active" data-menu="nombres">🎯 Nombres</button>
+            <button class="btn-menu" data-menu="builds">🔫 Builds</button>
+            <button class="btn-menu" data-menu="estrategias">📋 Estrategias</button>
+            <button class="btn-menu" data-menu="frases">💬 Frases</button>
+            <button class="btn-menu" data-menu="perfil">👤 Perfil</button>
+        </nav>
+
+        <main class="content">
+            <section id="nombres" class="seccion active">
+                <h2>🎯 Generador de Nombres Épicos</h2>
+                <div class="generator-box">
+                    <button class="btn-generar" onclick="generarNombreWeb()">Generar Nombre</button>
+                    <input type="number" id="cantidadNombres" min="1" max="20" value="5" placeholder="Cantidad">
+                    <button class="btn-generar btn-multiple" onclick="generarMultiplesNombres()">Generar Múltiples</button>
+                </div>
+                <div id="resultadoNombres" class="resultado">
+                    <div class="resultado-item">Aquí aparecerán los nombres...</div>
+                </div>
+            </section>
+
+            <section id="builds" class="seccion">
+                <h2>🔫 Generador de Builds de Armas</h2>
+                <div class="generator-box">
+                    <button class="btn-generar" onclick="generarBuildWeb()">Generar Build</button>
+                    <input type="number" id="cantidadBuilds" min="1" max="10" value="3" placeholder="Cantidad">
+                    <button class="btn-generar btn-multiple" onclick="generarMultiplesBuilds()">Generar Múltiples</button>
+                </div>
+                <div id="resultadoBuilds" class="resultado">
+                    <div class="resultado-item">Aquí aparecerán los builds...</div>
+                </div>
+            </section>
+
+            <section id="estrategias" class="seccion">
+                <h2>📋 Generador de Estrategias</h2>
+                <div class="generator-box">
+                    <button class="btn-generar" onclick="generarEstrategiaWeb()">Generar Estrategia</button>
+                    <input type="number" id="cantidadEstrategias" min="1" max="10" value="3" placeholder="Cantidad">
+                    <button class="btn-generar btn-multiple" onclick="generarMultiplesEstrategias()">Generar Múltiples</button>
+                </div>
+                <div id="resultadoEstrategias" class="resultado">
+                    <div class="resultado-item">Aquí aparecerán las estrategias...</div>
+                </div>
+            </section>
+
+            <section id="frases" class="seccion">
+                <h2>💬 Generador de Frases Motivacionales</h2>
+                <div class="generator-box">
+                    <button class="btn-generar" onclick="generarFraseWeb()">Generar Frase</button>
+                    <input type="number" id="cantidadFrases" min="1" max="10" value="5" placeholder="Cantidad">
+                    <button class="btn-generar btn-multiple" onclick="generarMultiplesFrases()">Generar Múltiples</button>
+                </div>
+                <div id="resultadoFrases" class="resultado">
+                    <div class="resultado-item">Aquí aparecerán las frases...</div>
+                </div>
+            </section>
+
+            <section id="perfil" class="seccion">
+                <h2>👤 Generador de Perfil Completo</h2>
+                <div class="generator-box">
+                    <button class="btn-generar btn-large" onclick="generarPerfilCompletoWeb()">Generar Mi Perfil</button>
+                    <button class="btn-generar btn-multiple" onclick="generarMultiplesPerfil()">Generar 3 Perfiles</button>
+                </div>
+                <div id="resultadoPerfil" class="resultado">
+                    <div class="resultado-item">Aquí aparecerá tu perfil...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>🎮 Generador Free Fire © 2024 | ¡Epicidad Máxima! 🔥</p>
+            <p>
+                <button class="btn-copiar" onclick="copiarTodo()">📋 Copiar Todo</button>
+                <button class="btn-limpiar" onclick="limpiarTodo()">🗑️ Limpiar</button>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
